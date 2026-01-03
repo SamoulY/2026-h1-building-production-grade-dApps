@@ -22,6 +22,7 @@ This folder contains screenshots of the completed work for Lesson 1 from liumeng
 ### 1.3 SubWallet
 
 > Ethereum: 0x4A622DaB8485AbaF718Fa40073747EE13d7110df
+
 > Paseo testnet: 15qdkk1xcCxFwC9xB1BN436cDxUQ8pM3m2GKRfG1VnbxmRJF
 
 ![1.3.subwallet.png](assets/1.3.subwallet.png)
@@ -68,6 +69,7 @@ talisman中不显示该token余额，因为创建的account是polkadot的
 把talisman钱包的助记词导入metamask，选择新导入的wallet - receive - network选择刚才添加的testnet - 复制地址，到上述水龙头获取testnet token，可以查询到Tokens: 4,999.989 PAS
 
 又在talisman创建一个eth account:eth_account1此时可以看到余额了：5000 PAS
+
 eth_account1: 0xA75Aab290Be63b6e22A3fD98E2a4d928D758d689
 
 在线查询： https://paseo.subscan.io/
@@ -123,16 +125,16 @@ metamask提供的的地址格式是eth address，和substrate address的不同�
 		- 修改钱包地址：注意看清楚，eth account address还是substrate account address
             substrate 和 talisman 代码需要修改, 和 metamask 不一样
 	- npx ts-node src/index.ts
-    ![ 4.1.checkBalance.by.typescript.png ](assets/4.1.checkBalance.by.typescript.png)
+![ 4.1.checkBalance.by.typescript.png ](assets/4.1.checkBalance.by.typescript.png)
 
 
 ### 4.2 通过钱包工具代码获取账户余额
     - 通过metamask获取账户余额：
-    ![ 3.1.metamask_wallet_got_token.png ](assets/3.1.metamask_wallet_got_token.png)
     - 通过talisman获取账户余额
-    ![ 3.2.talisman_wallet_got_token.png ](assets/3.2.talisman_wallet_got_token.png)
     - 通过subwallet获取账户余额
-    ![ 3.3.subwallet_wallet_got_token.png ](assets/3.3.subwallet_wallet_got_token.png)
+![ 3.1.metamask_wallet_got_token.png ](assets/3.1.metamask_wallet_got_token.png)
+![ 3.2.talisman_wallet_got_token.png ](assets/3.2.talisman_wallet_got_token.png)
+![ 3.3.subwallet_wallet_got_token.png ](assets/3.3.subwallet_wallet_got_token.png)
 
 
 
