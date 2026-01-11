@@ -49,9 +49,9 @@ describe("MiniSwap", function () {
       let poolKey: string;
       // Replicate the exact logic from the contract: if tokenA < tokenB, use [tokenA, tokenB], else use [tokenB, tokenA]
       if (BigInt(tokenAAddr) < BigInt(tokenBAddr)) {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenAAddr, tokenBAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenAAddr, tokenBAddr]));
       } else {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenBAddr, tokenAAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenBAddr, tokenAAddr]));
       }
 
       // Add initial liquidity
@@ -77,9 +77,9 @@ describe("MiniSwap", function () {
       let poolKey: string;
       // Replicate the exact logic from the contract: if tokenA < tokenB, use [tokenA, tokenB], else use [tokenB, tokenA]
       if (BigInt(tokenAAddr) < BigInt(tokenBAddr)) {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenAAddr, tokenBAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenAAddr, tokenBAddr]));
       } else {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenBAddr, tokenAAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenBAddr, tokenAAddr]));
       }
 
       // First provider adds liquidity
@@ -136,9 +136,9 @@ describe("MiniSwap", function () {
       let poolKey: string;
       // Replicate the exact logic from the contract: if tokenA < tokenB, use [tokenA, tokenB], else use [tokenB, tokenA]
       if (BigInt(tokenAAddr) < BigInt(tokenBAddr)) {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenAAddr, tokenBAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenAAddr, tokenBAddr]));
       } else {
-        poolKey = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["address", "address"], [tokenBAddr, tokenAAddr]));
+        poolKey = ethers.keccak256(ethers.solidityPacked(["address", "address"], [tokenBAddr, tokenAAddr]));
       };
 
       // Add liquidity first
