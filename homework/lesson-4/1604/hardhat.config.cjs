@@ -57,6 +57,30 @@ module.exports = {
   networks: {
     hardhat: {
       // Standard hardhat network
+    },
+    passetHub: {
+      url: "https://testnet-passet-hub-eth-rpc.polkadot.io",
+      accounts: process.env.POLKADOT_PRIVATE_KEY ? [process.env.POLKADOT_PRIVATE_KEY] : [],
+      chainId: 420420422, // Correct chain ID for the network
+      gas: "auto",
+      gasPrice: "auto",
+      timeout: 60000,
     }
   },
+  etherscan: {
+    apiKey: {
+      // Placeholder - you may need to get an actual API key if the network supports verification
+      passetHub: process.env.POLKADOT_API_KEY || "NO_KEY_NEEDED",
+    },
+    customChains: [
+      {
+        network: "passetHub",
+        chainId: 420420422, // Correct chain ID
+        urls: {
+          apiURL: "https://testnet-passet-hub-eth-rpc.polkadot.io/api", // Actual API endpoint for the network
+          browserURL: "https://testnet-passet-hub-explorer.polkadot.io", // Explorer URL
+        }
+      }
+    ]
+  }
 };
