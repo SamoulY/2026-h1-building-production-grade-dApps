@@ -60,8 +60,10 @@ The same `contracts/ERC1963.sol` was deployed to Polkadot Hub TestNet using **Re
 
 ## Commands (Foundry – build only; deploy via Remix)
 
+`lib/` is in `.gitignore` (not submitted). To build locally, install forge-std first:
+
 ```bash
-forge install foundry-rs/forge-std --no-git   # if lib/ missing after clone
+forge install foundry-rs/forge-std --no-git   # required: lib/ not in repo
 cp .env.example .env   # set PRIVATE_KEY, RPC_URL for Cast
 forge build
 ```
